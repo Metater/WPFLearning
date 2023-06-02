@@ -1,0 +1,52 @@
+﻿<Window x:Class="WPFLearning.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFLearning"
+        xmlns:view="clr-namespace:WPFLearning.View"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <!-- Header -->
+            <RowDefinition Height="auto"/>
+            <!-- Body -->
+            <RowDefinition/>
+            <!-- Splitter -->
+            <RowDefinition Height="5"/>
+            <!-- Footer -->
+            <RowDefinition Height="24"/>
+        </Grid.RowDefinitions>
+
+        <!-- Header -->
+        <view:HeaderPane Grid.Row="0"/>
+
+        <!-- Body -->
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <!-- Eyeshot -->
+                <ColumnDefinition/>
+                <!-- Splitter -->
+                <ColumnDefinition Width="5"/>
+                <!-- Controls -->
+                <ColumnDefinition Width="96"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Eyeshot -->
+            <view:EyeshotPane Grid.Column="0"/>
+
+            <!-- Splitter -->
+            <GridSplitter Grid.Column="1" HorizontalAlignment="Stretch" Background="#18122B"/>
+
+            <!-- Controls -->
+            <view:ControlsPane Grid.Column="2"/>
+        </Grid>
+
+        <!-- Splitter -->
+        <GridSplitter Grid.Row="2" HorizontalAlignment="Stretch" Background="#18122B"/>
+
+        <!-- Footer -->
+        <view:FooterPane Grid.Row="3"/>
+    </Grid>
+</Window>
