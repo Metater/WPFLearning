@@ -7,6 +7,12 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid Background="#443C68">
-        <TextBlock Text="123456789" Foreground="WhiteSmoke"/>
+        <StackPanel>
+            <TextBlock Name="tbDebugA" Text="Footer pane" Foreground="WhiteSmoke"/>
+            <TextBlock Name="tbDebugB" Text="Footer pane" Foreground="WhiteSmoke"/>
+            <TextBlock Name="tbDebugC" Text="Footer pane" Foreground="WhiteSmoke"/>
+            <TextBlock Name="tbDebugD" Text="Footer pane" Foreground="WhiteSmoke"/>
+            <TextBlock Name="tbDebugE" Text="Footer pane" Foreground="WhiteSmoke"/>
+        </StackPanel>
     </Grid>
 </UserControl>

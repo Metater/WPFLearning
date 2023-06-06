@@ -16,7 +16,7 @@
             <!-- Splitter -->
             <RowDefinition Height="5"/>
             <!-- Footer -->
-            <RowDefinition Height="24"/>
+            <RowDefinition Height="96"/>
         </Grid.RowDefinitions>
 
         <!-- Header -->
@@ -30,7 +30,7 @@
                 <!-- Splitter -->
                 <ColumnDefinition Width="5"/>
                 <!-- Controls -->
-                <ColumnDefinition Width="96"/>
+                <ColumnDefinition Width="120"/>
             </Grid.ColumnDefinitions>
 
             <!-- Eyeshot -->

@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WPFLearning.General;
 
 namespace WPFLearning.View
 {
@@ -23,6 +24,12 @@ namespace WPFLearning.View
         public FooterPane()
         {
             InitializeComponent();
+
+            Refs.tbDebugA = tbDebugA;
+            Refs.tbDebugB = tbDebugB;
+            Refs.tbDebugC = tbDebugC;
+            Refs.tbDebugD = tbDebugD;
+            Refs.tbDebugE = tbDebugE;
         }
     }
 }

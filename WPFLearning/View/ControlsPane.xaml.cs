@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using WPFLearning.ViewModel;
+using WPFLearning.General;
 
 namespace WPFLearning.View
 {
@@ -24,8 +24,30 @@ namespace WPFLearning.View
         public ControlsPane()
         {
             InitializeComponent();
-            ControlsPaneViewModel vm = new ControlsPaneViewModel();
-            DataContext = vm;
+
+            Refs.toggleButtonZoomFit = ToggleButtonZoomFit;
+            Refs.sliderIterations = SliderIterations;
+            Refs.sliderWeldMaxGap = SliderWeldMaxGap;
+        }
+
+        private void ButtonReload_Click(object sender, RoutedEventArgs e)
+        {
+            Refs.InvokeReload();
+        }
+
+        private void ButtonCancel_Click(object sender, RoutedEventArgs e)
+        {
+            Refs.InvokeCancel();
+        }
+
+        private void SliderIterations_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            TextSliderIterations.Text = $"Iterations: {(int)e.NewValue}";
+        }
+
+        private void SliderWeldMaxGap_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            TextSliderWeldMaxGap.Text = $"Weld max gap: {Math.Round(e.NewValue, 3)}";
         }
     }
 }

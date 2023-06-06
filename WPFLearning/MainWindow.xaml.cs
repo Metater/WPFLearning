@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WPFLearning.General;
 
 namespace WPFLearning
 {
@@ -23,6 +24,13 @@ namespace WPFLearning
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        protected override void OnContentRendered(EventArgs e)
+        {
+            Refs.InvokeOnContentRendered();
+
+            base.OnContentRendered(e);
         }
     }
 }
